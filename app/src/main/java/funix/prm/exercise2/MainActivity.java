@@ -33,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (etChirps.getText().toString().isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please fill all fields!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Please enter all fields!", Toast.LENGTH_SHORT).show();
                 } else {
                     int chirps = Integer.parseInt(etChirps.getText().toString().trim());
                     double temp = (chirps / 3.0) + 4;
-                    String results = "The approximate temperature outside is " + formatter.format(temp) + " degrees Celcius";
+                    String results = "The approximate temperature outside is " + formatter.format(temp) + " degrees Celsius";
                     tvResults.setText(results);
+                    tvResults.setVisibility(View.VISIBLE);
                 }
             }
         });
